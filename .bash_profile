@@ -1,3 +1,9 @@
+#bash-completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+
+
 #export LSCOLORS="exfxcxdxbxegedabagacad"
 export LSCOLORS="gxfxcxdxbxexexabagacad"
 #alias ls='LSCOLORS=gxfxcxdxbxexexabagacad /bin/ls -bFHGLOPW -a'
