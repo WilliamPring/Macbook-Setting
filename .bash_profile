@@ -1,14 +1,16 @@
 #bash-completion
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
+#Brew
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
-
-#export LSCOLORS="exfxcxdxbxegedabagacad"
+#bash
+alias mkdir='mkdir -pv'
+alias mv='mv -iv'
+alias cp='cp -iv'
+alias finder='open -a Finder ./' 
 export LSCOLORS="gxfxcxdxbxexexabagacad"
-#alias ls='LSCOLORS=gxfxcxdxbxexexabagacad /bin/ls -bFHGLOPW -a'
 alias ls='ls -bFHGLOPW -a'
-#alias ls='LSCOLORS=exfxcxdxbxegedabagacad /bin/ls -bFHGLOPW -a'
 
 # Setting PATH for Python 3.6
 # The original version is saved in .bash_profile.pysave
