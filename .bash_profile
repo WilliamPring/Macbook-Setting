@@ -1,6 +1,7 @@
 #bash-completion
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
-
+  if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+	  . /usr/local/share/bash-completion/bash_completion
+  fi
 #Brew
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 
@@ -12,9 +13,13 @@ alias finder='open -a Finder ./'
 export LSCOLORS="gxfxcxdxbxexexabagacad"
 alias ls='ls -bFHGLOPW -a'
 
+#Convience
+alias cd.2='cd ../../'
+alias cd.3='cd ../../../'
+alias cd.4='cd ../../../../'
+alias cd.5='cd ../../../../'
+
 # Setting PATH for Python 3.6
-# The original version is saved in .bash_profile.pysave
-#PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 #export PATH
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
@@ -25,3 +30,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 source ~/Documents/bash\ shell\ script/bash_automatic_cd.sh
 
 alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox-bin'
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
